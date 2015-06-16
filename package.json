@@ -1,0 +1,22 @@
+{
+  "name": "material-root",
+  "version": "1.0.0",
+  "description": "source for material design based sites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FlowStateStudio/material-root.git"
+  },
+  "author": "Oakley Hall <ohall@grtmail.com> (http://www.grassroots-tech.com/)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/FlowStateStudio/material-root/issues"
+  },
+  "homepage": "https://github.com/FlowStateStudio/material-root",
+  "dependencies": {
+    "react": "^0.13.3"
+  }
+}
