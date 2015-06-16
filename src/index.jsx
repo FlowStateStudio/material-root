@@ -3,10 +3,6 @@
  */
 
 import React from 'react';
+let Body = require('./components/body');
 
-const thingy = 'THIS ONE!';
-
-React.render(
-  <h1>Hello, world!</h1>,
-  document.getElementById('main')
-);
+React.render( <Body/>, document.body );
