@@ -24,5 +24,8 @@ gulp.task('assets', function() {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('watch', function() {
+  gulp.watch('src/**/*.*', ['build']);
+});
 
 gulp.task('default', ['build', 'assets']);
