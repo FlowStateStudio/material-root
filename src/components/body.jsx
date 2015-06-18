@@ -5,6 +5,7 @@ import React from 'react';
 import mui from 'material-ui';
 let ThemeManager = new mui.Styles.ThemeManager();
 let AppBar = mui.AppBar;
+let AppCanvas = mui.AppCanvas;
 let MenuItem = mui.MenuItem;
 let LeftNav = mui.LeftNav;
 
@@ -17,13 +18,8 @@ export default React.createClass({
       muiTheme: ThemeManager.getCurrentTheme()
     };
   },
-  getInitialState(){
-    return {
-
-    }
-  },
   _iconTouchHandler() {
-
+    this.refs.LeftNav.toggle();
   },
   _menuItems() {
     return [
@@ -49,11 +45,15 @@ export default React.createClass({
     ];
   },
   render() {
-    return <div>
-            <AppBar title='Title'
-                    iconClassNameRight="muidocs-icon-navigation-expand-more"
-                    onLeftIconButtonTouchTap={this._iconTouchHandler}/>
-            <LeftNav menuItems={this._menuItems()} />
-          </div>;
+    return <AppCanvas>
+            <AppBar title="Title"
+                    onLeftIconButtonTouchTap={this._iconTouchHandler}
+              />
+            <LeftNav ref="LeftNav"
+                     menuItems={this._menuItems()}
+                     docked={false}
+                     isInitiallyOpen="false"
+              />
+          </AppCanvas>;
   }
 });
